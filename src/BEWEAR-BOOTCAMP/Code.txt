@@ -1,0 +1,40 @@
+Codigo: SEXFX
+Bootcamp Ecommerce
+Aula 01
+Ver as tabelas da Base de dados
+https://neon.com/
+
+Aula 02
+Paginas usadas
+Para criar o TABS de log-in e log-out
+https://ui.shadcn.com/docs/components/tabs 
+
+Verificação/validação de campos no forms
+https://react-hook-form.com/
+
+valida dados verificando se estão no formato certo
+como por exemplo se um e-mail foi escrito corretamente ou se um número está dentro do limite esperado.
+https://zod.dev/
+
+Autenticação + Autenticação com google (google cloud console)
+https://www.better-auth.com/
+
+Aula 03 
+armazena o state na url da aplicação (Se quisermos 3x um produto e damos f5, ele guarda)
+https://nuqs.47ng.com/
+
+Abre o componente do "carrinho" à direita
+https://ui.shadcn.com/docs/components/sheet 
+
+https://tanstack.com/query/latest
+
+Aula 05
+Stripe
+Sgurança sgvh-jutg-xawg-qaoy-czvp
+https://www.npmjs.com/package/@stripe/stripe-js
+
+Eu:
+Deixar Responsivo para desktop e tablet
+Carrinho com mensagem que está vazio, 
+Ao adicionar um item por um numero a vermelho
+Se da erro o pagamento manter no carrinho
