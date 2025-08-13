@@ -1,6 +1,13 @@
 "use client";
 
-import { LogInIcon, LogOutIcon, MenuIcon } from "lucide-react";
+import {
+  LogInIcon,
+  LogOutIcon,
+  MenuIcon,
+  Truck,
+  House,
+  ShoppingBag,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,24 +65,90 @@ export const Header = () => {
                         </span>
                       </div>
                     </div>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={() => authClient.signOut()}
-                    >
-                      <LogOutIcon />
-                    </Button>
                   </div>
+                  <div className="mx-auto my-[20px] h-px w-8/9 border-0 bg-gray-200 dark:bg-gray-700"></div>
+                  <div className="ml-[15px]">
+                    <nav>
+                      <Link
+                        href="/"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <House size={18} />
+                        <span>Início</span>
+                      </Link>
+                    </nav>
+                    <nav>
+                      <Link
+                        href="/my-orders"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <Truck size={18} />
+                        <span>Os meus pedidos</span>
+                      </Link>
+                    </nav>
+                    <nav>
+                      <Link
+                        href="/cart/identification"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <ShoppingBag size={18} />
+                        <span>O meu saco</span>
+                      </Link>
+                    </nav>
+                  </div>
+
+                  <div className="mx-auto my-[20px] h-px w-8/9 border-0 bg-gray-200 dark:bg-gray-700"></div>
+                  <div className="ml-[15px]">
+                    <nav>
+                      <Link
+                        href="/category/camisetas"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <span>T-shirts</span>
+                      </Link>
+                    </nav>
+                    <nav>
+                      <Link
+                        href="/category/bermuda-shorts"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <span>Calções</span>
+                      </Link>
+                    </nav>
+                    <nav>
+                      <Link
+                        href="/category/calas"
+                        className="hover:bg-accent flex items-center gap-3 rounded-md p-2 transition"
+                      >
+                        <span>Calças</span>
+                      </Link>
+                    </nav>
+                  </div>
+                  <div className="mx-auto my-[20px] h-px w-8/9 border-0 bg-gray-200 dark:bg-gray-700"></div>
+                  <a
+                    className="hover:bg-accent flex cursor-pointer items-center gap-[10px] rounded-lg px-5 py-2.5 text-sm text-[#63666A] transition"
+                    onClick={() => authClient.signOut()}
+                  >
+                    <LogOutIcon />
+                    <span>Sair da Conta</span>
+                  </a>
                 </>
               ) : (
-                <div className="flex items-center justify-between">
-                  <h2 className="font-semibold">Olá. Faça seu login!</h2>
-                  <Button size="icon" asChild variant="outline">
-                    <Link href="/authentication">
-                      <LogInIcon />
-                    </Link>
-                  </Button>
-                </div>
+                <>
+                  <div className="flex items-center justify-between">
+                    <h2 className="m-0 flex items-center font-semibold">
+                      Olá. Faça seu login!
+                    </h2>
+                    <a
+                      href="/authentication"
+                      className="flex items-center rounded-lg bg-[#5131E8] px-5 py-2.5 text-sm font-medium text-white"
+                    >
+                      <span className="mr-2">Login</span>
+                      <LogInIcon size={16} />
+                    </a>
+                  </div>
+                  <div className="mx-auto my-[20px] h-px w-4/5 border-0 bg-gray-200 dark:bg-gray-700"></div>
+                </>
               )}
             </div>
           </SheetContent>
