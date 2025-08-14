@@ -28,13 +28,12 @@ const CheckoutSuccessPage = () => {
           />
           <DialogTitle className="mt-4 text-2xl">Pedido efetuado!</DialogTitle>
           <DialogDescription className="font-medium">
-            Seu pedido foi efetuado com sucesso. Você pode acompanhar o status
-            na seção de “Meus Pedidos”.
+            O seu pedido foi efetuado com sucesso.
           </DialogDescription>
 
-          <DialogFooter>
+          <DialogFooter className="flex !justify-center space-x-4">
             <Button className="rounded-full" size="lg">
-              Ver meus pedidos
+              <Link href="/">Ver os meus pedidos</Link>
             </Button>
             <Button
               className="rounded-full"

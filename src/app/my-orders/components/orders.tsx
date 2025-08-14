@@ -101,7 +101,7 @@ const Orders = ({ orders }: OrdersProps) => {
                       </p>
                     </div>
                     <div className="flex justify-between">
-                      <p className="text-sm">Frete</p>
+                      <p className="text-sm">Entrega</p>
                       <p className="text-muted-foreground text-sm font-medium">
                         GRÁTIS
                       </p>

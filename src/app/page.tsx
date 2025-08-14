@@ -33,7 +33,17 @@ const Home = async () => {
             height={0}
             width={0}
             sizes="100vw"
-            className="h-auto w-full"
+            className="h-full w-full md:hidden"
+          />
+        </div>
+        <div className="px-5">
+          <Image
+            src="/banner-01-dsk.png"
+            alt="Leve uma vida com estilo"
+            height={0}
+            width={0}
+            sizes="100vw"
+            className="hidden: md:h-[80vh] md:w-full"
           />
         </div>
 

@@ -133,7 +133,7 @@ const Addresses = ({
             {addresses?.length === 0 && (
               <div className="py-4 text-center">
                 <p className="text-muted-foreground">
-                  Você ainda não possui endereços cadastrados.
+                  Não tens morada registada
                 </p>
               </div>
             )}
@@ -159,7 +159,7 @@ const Addresses = ({
               <CardContent>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="add_new" id="add_new" />
-                  <Label htmlFor="add_new">Adicionar novo endereço</Label>
+                  <Label htmlFor="add_new">Adicionar morada</Label>
                 </div>
               </CardContent>
             </Card>
@@ -175,7 +175,7 @@ const Addresses = ({
             >
               {updateCartShippingAddressMutation.isPending
                 ? "Processando..."
-                : "Ir para pagamento"}
+                : "Continuar com o pagamento"}
             </Button>
           </div>
         )}
@@ -194,7 +194,7 @@ const Addresses = ({
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="Digite seu email" {...field} />
+                        <Input placeholder="exemplo@exemplo.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -208,10 +208,7 @@ const Addresses = ({
                     <FormItem>
                       <FormLabel>Nome completo</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="Digite seu nome completo"
-                          {...field}
-                        />
+                        <Input placeholder="Nome completo" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -223,11 +220,11 @@ const Addresses = ({
                   name="cpf"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>CPF</FormLabel>
+                      <FormLabel>NIF</FormLabel>
                       <FormControl>
                         <PatternFormat
                           format="###.###.###-##"
-                          placeholder="000.000.000-00"
+                          placeholder="123456789"
                           customInput={Input}
                           {...field}
                         />
@@ -242,11 +239,11 @@ const Addresses = ({
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Celular</FormLabel>
+                      <FormLabel>Telemóvel</FormLabel>
                       <FormControl>
                         <PatternFormat
-                          format="(##) #####-####"
-                          placeholder="(11) 99999-9999"
+                          format="(####) #####-####"
+                          placeholder="(+351) 912345678"
                           customInput={Input}
                           {...field}
                         />
@@ -325,9 +322,9 @@ const Addresses = ({
                   name="neighborhood"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Bairro</FormLabel>
+                      <FormLabel>Localidade</FormLabel>
                       <FormControl>
-                        <Input placeholder="Digite o bairro" {...field} />
+                        <Input placeholder="Localidade" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -353,9 +350,9 @@ const Addresses = ({
                   name="state"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Estado</FormLabel>
+                      <FormLabel>Distrito</FormLabel>
                       <FormControl>
-                        <Input placeholder="Digite o estado" {...field} />
+                        <Input placeholder="Distrito" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -373,8 +370,8 @@ const Addresses = ({
               >
                 {createShippingAddressMutation.isPending ||
                 updateCartShippingAddressMutation.isPending
-                  ? "Salvando..."
-                  : "Salvar endereço"}
+                  ? "Guardar..."
+                  : "Guardar morada"}
               </Button>
             </form>
           </Form>
